@@ -4,7 +4,8 @@
   "description": "\"vue-mall基于express的后端服务\"",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node bin/www"
   },
   "author": "\"chenjun\"",
   "license": "ISC",
