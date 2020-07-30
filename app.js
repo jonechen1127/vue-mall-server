@@ -18,8 +18,8 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 // var dbUrl = 'mongodb://localhost/shop-mall';
 var dbUrl = "mongodb://testAdmin:123456@127.0.0.1:27017/test";
-
-mongoose.connect(dbUrl, {useNewUrlParser:true}, function(err){
+mongoose.set('useCreateIndex', true);
+mongoose.connect(dbUrl, {useNewUrlParser:true,useUnifiedTopology: true}, function(err){
 
 　　if(err){
 
