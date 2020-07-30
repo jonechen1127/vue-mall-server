@@ -17,22 +17,14 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 // var dbUrl = 'mongodb://localhost/shop-mall';
-var dbUrl = "mongodb://testAdmin:123456@127.0.0.1:27017/test";
+var dbUrl = "mongodb://127.0.0.1:27017/shop-mall";
 mongoose.set('useCreateIndex', true);
-mongoose.connect(dbUrl, {useNewUrlParser:true,useUnifiedTopology: true}, function(err){
-
+mongoose.connect(dbUrl, {useNewUrlParser:true, useUnifiedTopology: true}, function(err){
 　　if(err){
-
 　　　　console.log('Connection Error:' + err)
-
 　　}else{
-
 　　　　console.log('Connection success!') }
-
 })
-
-
-
 
 // mongoose.connect(dbUrl);
 // mongoose.connection.on('connected',()=>{
