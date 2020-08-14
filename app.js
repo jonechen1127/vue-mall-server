@@ -4,20 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var users = require('./routes/users');
 var categories = require('./routes/categories');
 var products = require('./routes/products');
 var shippingAddress = require('./routes/shippingAddress');
 var order = require('./routes/order');
-
 var app = express();
-
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-// var dbUrl = 'mongodb://localhost/shop-mall';
-var dbUrl = "mongodb://127.0.0.1:27017/shop-mall";
+// 默认mongodb不需要权限，远程连接Mongodb一定要设置权限，
+// 对@使用16进制进行URL编码：%40,当前密码有特殊字符@
+var dbUrl = "mongodb://test:%40Cj19861127@127.0.0.1:27017/shop-mall";
 mongoose.set('useCreateIndex', true);
 mongoose.connect(dbUrl, {useNewUrlParser:true, useUnifiedTopology: true}, function(err){
 　　if(err){
