@@ -7,6 +7,6 @@ module.exports = {
     email: {
         service: 'QQ',
         user: '402074940@qq.com',
-        pass: 'xxxxxxxx',
+        pass: 'gvynjsjvwlcxcaaf',
     }
 }
